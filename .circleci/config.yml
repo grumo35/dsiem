@@ -45,6 +45,7 @@ jobs:
             cd web/ui
             rm -rf node_modules
             npx npm-force-resolutions
+            npm cache verify
             npm install
       - save_cache:
           key: node-mod-v1-{{ checksum "web/ui/package.json" }}
