@@ -1,7 +1,7 @@
 filebeat.inputs:
 - type: log
   paths:
-    - /var/log/dsiem/siem_alarm_events.json
+    - /var/dsiem/log/siem_alarm_events.json
   fields_under_root: true
   fields: { application: siem, siem_data_type: alarm_events }
   tail_files: true
@@ -10,7 +10,7 @@ filebeat.inputs:
 
 - type: log
   paths:
-    - /var/log/dsiem/siem_alarms.json
+    - /var/dsiem/log/siem_alarms.json
   fields_under_root: true
   fields: { application: siem, siem_data_type: alarms }
   tail_files: true
@@ -19,7 +19,7 @@ filebeat.inputs:
 
 - type: log
   paths:
-    - /var/log/dsiem/dtester.json
+    - /var/dsiem/log/dtester.json
   fields_under_root: true
   fields: { application: dtester }
   tail_files: true
